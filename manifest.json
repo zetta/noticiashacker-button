@@ -1,0 +1,15 @@
+{
+  "name": "NoticiasHacker Button",
+  //"options_page": "options.html",
+  "version": "1.0",
+  "description": "Boton para noticias hacker",
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_title": "Enviar un link a NoticiasHacker",
+    "popup": "popup.html"
+  },
+  "background_page": "background.html",
+  "permissions": [
+    "www.noticiashacker.com","tabs"
+  ]
+}

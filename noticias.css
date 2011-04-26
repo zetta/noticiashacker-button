@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif; }
+
+body {
+  background-color: #eeeeee;
+  font-size: 14px; }
+
+#container {
+  width: 400px;
+}
+
+.hidden{
+  visibility: hidden;
+}

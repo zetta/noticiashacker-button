@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script type="text/javascript" src="jquery-1.5.2.min.js"></script>
+    <link rel="stylesheet" href="noticias.css" type="text/css"/> 
+  </head>
+  <body>
+  
+    <asset id="container">
+  
+  <section class="post hidden">
+    <a href="#">Este es el link</a> by <a href="#" class="author">author</a>
+  </section>
+  
+  </asset>
+  </body>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+ 
+    var json = JSON.parse(localStorage['nh_json']);
+   
+    
+ 
+    for(var idx in json.posts){
+      post = json.posts[idx];
+      console.log(post);
+      $('#container').append(
+        $('<section class=post>').append(
+          $('<a>').attr('href',post.url).text(post.title)
+        )
+      );
+    }
+ /* 
+   Object
+  comment_count: 1
+  created: "1303778299"
+  id: "ag5ub3RpY2lhc2hhY2tlcnIMCxIEUG9zdBjG3AsM"
+  message: ""
+  title: "@pragdave cuestiona el rumbo de Rails 3.1 y desata la discusión"
+  url: "http://twitter.com/#!/pragdave/status/62510978893492224"
+  user: "hmart"
+  votes: 4
+ */
+ 
+  })
+</script>
+</html>
